@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 54bdc1f74f3be654a8dc63c696b57a36
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 115588
+  packageName: "MK Slot Kit \u2022 Modern Neon Casino Template"
+  packageVersion: 4.0.1
+  assetPath: Assets/ModernSlots/0_Common/Scripts/MkUtils/Color/ColorFlasher.cs
+  uploadId: 772711

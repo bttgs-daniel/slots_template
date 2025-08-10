@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 25a791b9f20afdb4c9c4922d080cf6cc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 115588
+  packageName: "MK Slot Kit \u2022 Modern Neon Casino Template"
+  packageVersion: 4.0.1
+  assetPath: Assets/ModernSlots/0_Common/Scripts/MkUtils/EditorTools/Inspector_Button.cs
+  uploadId: 772711

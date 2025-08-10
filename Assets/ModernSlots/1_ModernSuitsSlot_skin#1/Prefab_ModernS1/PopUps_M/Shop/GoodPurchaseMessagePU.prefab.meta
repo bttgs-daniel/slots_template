@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: fa291749b85dfb14bbf93f93aefb5aa3
+timeCreated: 1519041959
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 115588
+  packageName: "MK Slot Kit \u2022 Modern Neon Casino Template"
+  packageVersion: 4.0.1
+  assetPath: Assets/ModernSlots/1_ModernSuitsSlot_skin#1/Prefab_ModernS1/PopUps_M/Shop/GoodPurchaseMessagePU.prefab
+  uploadId: 772711

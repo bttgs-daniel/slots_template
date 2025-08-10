@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 085fed8c5c169b742a26382dff2ea085
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 115588
+  packageName: "MK Slot Kit \u2022 Modern Neon Casino Template"
+  packageVersion: 4.0.1
+  assetPath: Assets/ModernSlots/0_Common/MainScriptableObjects/CoinsHolder.asset
+  uploadId: 772711

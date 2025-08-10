@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a8d7db43eb120ab4faef12d0d53cbafa
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 115588
+  packageName: "MK Slot Kit \u2022 Modern Neon Casino Template"
+  packageVersion: 4.0.1
+  assetPath: Assets/ModernSlots/0_Common/Scripts/Slot/WinSymb/WinSymbolBehavior.cs
+  uploadId: 772711

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 9fc4785c7c26a14409f6ce786f521021
+timeCreated: 1521279919
+licenseType: Store
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 115588
+  packageName: "MK Slot Kit \u2022 Modern Neon Casino Template"
+  packageVersion: 4.0.1
+  assetPath: Assets/ModernSlots/0_Common/Materials_Shaders/EasyText/SoftShaderFont.shader
+  uploadId: 772711

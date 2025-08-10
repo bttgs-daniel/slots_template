@@ -1,0 +1,2815 @@
+fileFormatVersion: 2
+guid: f04f3877adeaea0488c05cbe077d7364
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6158047881977212275
+    second: RussoOne-Regular_se_rep_edit_work_0
+  - first:
+      213: -5308382983471866326
+    second: RussoOne-Regular_se_rep_edit_work_1
+  - first:
+      213: 7934808737013342387
+    second: RussoOne-Regular_se_rep_edit_work_2
+  - first:
+      213: 5345789761021425096
+    second: RussoOne-Regular_se_rep_edit_work_3
+  - first:
+      213: -5135006991035331473
+    second: RussoOne-Regular_se_rep_edit_work_4
+  - first:
+      213: -2066955237762000331
+    second: RussoOne-Regular_se_rep_edit_work_5
+  - first:
+      213: 5007341652795548764
+    second: RussoOne-Regular_se_rep_edit_work_6
+  - first:
+      213: 5677669112579401263
+    second: RussoOne-Regular_se_rep_edit_work_7
+  - first:
+      213: -9067405413425438956
+    second: RussoOne-Regular_se_rep_edit_work_8
+  - first:
+      213: 4349622662325175043
+    second: RussoOne-Regular_se_rep_edit_work_9
+  - first:
+      213: 7152019781994808257
+    second: RussoOne-Regular_se_rep_edit_work_10
+  - first:
+      213: 1274192468372667830
+    second: RussoOne-Regular_se_rep_edit_work_11
+  - first:
+      213: 4152016707158152170
+    second: RussoOne-Regular_se_rep_edit_work_12
+  - first:
+      213: -5938198366506952875
+    second: RussoOne-Regular_se_rep_edit_work_13
+  - first:
+      213: -8809947965948315756
+    second: RussoOne-Regular_se_rep_edit_work_14
+  - first:
+      213: -2009033877822499320
+    second: RussoOne-Regular_se_rep_edit_work_15
+  - first:
+      213: -3291895128504711893
+    second: RussoOne-Regular_se_rep_edit_work_16
+  - first:
+      213: 5107229673018159056
+    second: RussoOne-Regular_se_rep_edit_work_17
+  - first:
+      213: -1696907415157656584
+    second: RussoOne-Regular_se_rep_edit_work_18
+  - first:
+      213: 4369504556461241944
+    second: RussoOne-Regular_se_rep_edit_work_19
+  - first:
+      213: 2798076650305288273
+    second: RussoOne-Regular_se_rep_edit_work_20
+  - first:
+      213: 2975422440073780856
+    second: RussoOne-Regular_se_rep_edit_work_21
+  - first:
+      213: 4537034407048488156
+    second: RussoOne-Regular_se_rep_edit_work_22
+  - first:
+      213: 1368960275310098527
+    second: RussoOne-Regular_se_rep_edit_work_23
+  - first:
+      213: -6007525931458526428
+    second: RussoOne-Regular_se_rep_edit_work_24
+  - first:
+      213: -4198556845743911087
+    second: RussoOne-Regular_se_rep_edit_work_25
+  - first:
+      213: 9029977338866190872
+    second: RussoOne-Regular_se_rep_edit_work_26
+  - first:
+      213: -1806080256763683540
+    second: RussoOne-Regular_se_rep_edit_work_27
+  - first:
+      213: -4660521506343873797
+    second: RussoOne-Regular_se_rep_edit_work_28
+  - first:
+      213: -5314729947142517958
+    second: RussoOne-Regular_se_rep_edit_work_29
+  - first:
+      213: 7990248147474787839
+    second: RussoOne-Regular_se_rep_edit_work_30
+  - first:
+      213: 5721831402013793417
+    second: RussoOne-Regular_se_rep_edit_work_31
+  - first:
+      213: 3404221778552199121
+    second: RussoOne-Regular_se_rep_edit_work_32
+  - first:
+      213: 140630018853403731
+    second: RussoOne-Regular_se_rep_edit_work_33
+  - first:
+      213: -4263435151675516912
+    second: RussoOne-Regular_se_rep_edit_work_34
+  - first:
+      213: -4357200547065407408
+    second: RussoOne-Regular_se_rep_edit_work_35
+  - first:
+      213: 8286122355362926726
+    second: RussoOne-Regular_se_rep_edit_work_36
+  - first:
+      213: 1880729006548321003
+    second: RussoOne-Regular_se_rep_edit_work_37
+  - first:
+      213: -7071095198446920020
+    second: RussoOne-Regular_se_rep_edit_work_38
+  - first:
+      213: 1968218292604279943
+    second: RussoOne-Regular_se_rep_edit_work_39
+  - first:
+      213: -843229037827213115
+    second: RussoOne-Regular_se_rep_edit_work_40
+  - first:
+      213: -7326727491767627121
+    second: RussoOne-Regular_se_rep_edit_work_41
+  - first:
+      213: 6159571170533992775
+    second: RussoOne-Regular_se_rep_edit_work_42
+  - first:
+      213: 9176246145535068290
+    second: RussoOne-Regular_se_rep_edit_work_43
+  - first:
+      213: 1233972550477356760
+    second: RussoOne-Regular_se_rep_edit_work_44
+  - first:
+      213: -3791476090538482256
+    second: RussoOne-Regular_se_rep_edit_work_45
+  - first:
+      213: 294400917917087779
+    second: RussoOne-Regular_se_rep_edit_work_46
+  - first:
+      213: -1177334768149452865
+    second: RussoOne-Regular_se_rep_edit_work_47
+  - first:
+      213: 2902027473241217802
+    second: RussoOne-Regular_se_rep_edit_work_48
+  - first:
+      213: -5659786807675473304
+    second: RussoOne-Regular_se_rep_edit_work_49
+  - first:
+      213: 4958193651884413892
+    second: RussoOne-Regular_se_rep_edit_work_50
+  - first:
+      213: -6331269323753151563
+    second: RussoOne-Regular_se_rep_edit_work_51
+  - first:
+      213: -4131255107566340557
+    second: RussoOne-Regular_se_rep_edit_work_52
+  - first:
+      213: -47390956885560978
+    second: RussoOne-Regular_se_rep_edit_work_53
+  - first:
+      213: 7131347752416885930
+    second: RussoOne-Regular_se_rep_edit_work_54
+  - first:
+      213: 1842674688544034382
+    second: RussoOne-Regular_se_rep_edit_work_55
+  - first:
+      213: -5118675403449234008
+    second: RussoOne-Regular_se_rep_edit_work_56
+  - first:
+      213: -4964086247127813268
+    second: RussoOne-Regular_se_rep_edit_work_57
+  - first:
+      213: 3646561754827406587
+    second: RussoOne-Regular_se_rep_edit_work_58
+  - first:
+      213: 185271624709786316
+    second: RussoOne-Regular_se_rep_edit_work_59
+  - first:
+      213: 8226755149250952123
+    second: RussoOne-Regular_se_rep_edit_work_60
+  - first:
+      213: 6741259422573237036
+    second: RussoOne-Regular_se_rep_edit_work_61
+  - first:
+      213: 1654944010023693504
+    second: RussoOne-Regular_se_rep_edit_work_62
+  - first:
+      213: -3067391192165820011
+    second: RussoOne-Regular_se_rep_edit_work_63
+  - first:
+      213: 3003745964737607971
+    second: RussoOne-Regular_se_rep_edit_work_64
+  - first:
+      213: 3309787851007909159
+    second: RussoOne-Regular_se_rep_edit_work_65
+  - first:
+      213: 7651226240245747505
+    second: RussoOne-Regular_se_rep_edit_work_66
+  - first:
+      213: 7213082244375210804
+    second: RussoOne-Regular_se_rep_edit_work_67
+  - first:
+      213: -2692600768484449840
+    second: RussoOne-Regular_se_rep_edit_work_68
+  - first:
+      213: -6965162213323534877
+    second: RussoOne-Regular_se_rep_edit_work_69
+  - first:
+      213: 1555968036129734573
+    second: RussoOne-Regular_se_rep_edit_work_70
+  - first:
+      213: 5500165875468476753
+    second: RussoOne-Regular_se_rep_edit_work_71
+  - first:
+      213: 4523553828513874058
+    second: RussoOne-Regular_se_rep_edit_work_72
+  - first:
+      213: 5914817866928810900
+    second: RussoOne-Regular_se_rep_edit_work_73
+  - first:
+      213: -4102945770186829736
+    second: RussoOne-Regular_se_rep_edit_work_74
+  - first:
+      213: 2112460785167462920
+    second: RussoOne-Regular_se_rep_edit_work_75
+  - first:
+      213: -7272944516880367999
+    second: RussoOne-Regular_se_rep_edit_work_76
+  - first:
+      213: 625087166299903528
+    second: RussoOne-Regular_se_rep_edit_work_77
+  - first:
+      213: 3800610243013997206
+    second: RussoOne-Regular_se_rep_edit_work_78
+  - first:
+      213: -7057546051099010876
+    second: RussoOne-Regular_se_rep_edit_work_79
+  - first:
+      213: -7290850543331205877
+    second: RussoOne-Regular_se_rep_edit_work_80
+  - first:
+      213: -77851990623213686
+    second: RussoOne-Regular_se_rep_edit_work_81
+  - first:
+      213: 152730965699865356
+    second: RussoOne-Regular_se_rep_edit_work_82
+  - first:
+      213: -1325807982658314419
+    second: RussoOne-Regular_se_rep_edit_work_83
+  - first:
+      213: -862886358764918479
+    second: RussoOne-Regular_se_rep_edit_work_84
+  - first:
+      213: 1840254424367038209
+    second: RussoOne-Regular_se_rep_edit_work_85
+  - first:
+      213: -5237470236702025058
+    second: RussoOne-Regular_se_rep_edit_work_86
+  - first:
+      213: 3930933437622578578
+    second: RussoOne-Regular_se_rep_edit_work_87
+  - first:
+      213: -291619161967397267
+    second: RussoOne-Regular_se_rep_edit_work_88
+  - first:
+      213: -7268956035525880998
+    second: RussoOne-Regular_se_rep_edit_work_89
+  - first:
+      213: 3256145919620470689
+    second: RussoOne-Regular_se_rep_edit_work_90
+  - first:
+      213: -125231510206887386
+    second: RussoOne-Regular_se_rep_edit_work_91
+  - first:
+      213: -2209929012285662871
+    second: RussoOne-Regular_se_rep_edit_work_92
+  - first:
+      213: 8945141589975624544
+    second: RussoOne-Regular_se_rep_edit_work_93
+  - first:
+      213: 8798129197684975650
+    second: RussoOne-Regular_se_rep_edit_work_94
+  - first:
+      213: -8347635661294733200
+    second: RussoOne-Regular_se_rep_edit_work_95
+  - first:
+      213: 9091508342426496441
+    second: RussoOne-Regular_se_rep_edit_work_96
+  - first:
+      213: -5051942393799299436
+    second: RussoOne-Regular_se_rep_edit_work_97
+  - first:
+      213: 3624370029304665226
+    second: RussoOne-Regular_se_rep_edit_work_98
+  - first:
+      213: -2520046865365463568
+    second: RussoOne-Regular_se_rep_edit_work_99
+  - first:
+      213: 7750032656666406372
+    second: RussoOne-Regular_se_rep_edit_work_100
+  - first:
+      213: 7688375759896508416
+    second: RussoOne-Regular_se_rep_edit_work_101
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 361
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d82d6ecf3183a8aa0800000000000000
+      internalID: -6158047881977212275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_1
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 369
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2e5e623dc5d456b0800000000000000
+      internalID: -5308382983471866326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_2
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 377
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b0a852818a1e1e60800000000000000
+      internalID: 7934808737013342387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_3
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 373
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c53a95e67f003a40800000000000000
+      internalID: 5345789761021425096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_4
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 373
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6c013c195accb8b0800000000000000
+      internalID: -5135006991035331473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_5
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 381
+        width: 41
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53a10969923b053e0800000000000000
+      internalID: -2066955237762000331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_6
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 321
+        width: 35
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5465e304b6ad7540800000000000000
+      internalID: 5007341652795548764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_7
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 337
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f26a08fe9f12bce40800000000000000
+      internalID: 5677669112579401263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_8
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 321
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41f925251da1a2280800000000000000
+      internalID: -9067405413425438956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_9
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 329
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30381ee14c6fc5c30800000000000000
+      internalID: 4349622662325175043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_10
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 325
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c30e544914114360800000000000000
+      internalID: 7152019781994808257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_11
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 337
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bdb4dc8c47dea110800000000000000
+      internalID: 1274192468372667830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_12
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 333
+        width: 37
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae316a3623dee9930800000000000000
+      internalID: 4152016707158152170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_13
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 333
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5575c8e2c08479da0800000000000000
+      internalID: -5938198366506952875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_14
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 333
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 497b9f78007ccb580800000000000000
+      internalID: -8809947965948315756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_15
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 273
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8061aaa155a7e14e0800000000000000
+      internalID: -2009033877822499320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_16
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 289
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2543a362d6d052d0800000000000000
+      internalID: -3291895128504711893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_17
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 273
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dfe49e045680e640800000000000000
+      internalID: 5107229673018159056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_18
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 281
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f33dce42bf5378e0800000000000000
+      internalID: -1696907415157656584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_19
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 277
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 856b2545e3993ac30800000000000000
+      internalID: 4369504556461241944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_20
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 289
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 158f2cb73e3c4d620800000000000000
+      internalID: 2798076650305288273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_21
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 285
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87ed25dd1f2da4920800000000000000
+      internalID: 2975422440073780856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_22
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 285
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd4a9d541c8c6fe30800000000000000
+      internalID: 4537034407048488156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_23
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 285
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f58ba790e168ff210800000000000000
+      internalID: 1368960275310098527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_24
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 233
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 423877c9efaf0aca0800000000000000
+      internalID: -6007525931458526428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_25
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 213
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f46203bcabbb5c0800000000000000
+      internalID: -4198556845743911087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_26
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 225
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a42fcfb8ce05d70800000000000000
+      internalID: 9029977338866190872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_27
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 241
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2d11c353938fe6e0800000000000000
+      internalID: -1806080256763683540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_28
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 225
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf21e4ae160825fb0800000000000000
+      internalID: -4660521506343873797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_29
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 233
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3b807f85494e36b0800000000000000
+      internalID: -5314729947142517958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_30
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 229
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffd25712b5013ee60800000000000000
+      internalID: 7990248147474787839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_31
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 241
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98c15b53857086f40800000000000000
+      internalID: 5721831402013793417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_32
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 237
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d79047dba93e3f20800000000000000
+      internalID: 3404221778552199121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_33
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 237
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35c738ec14e93f100800000000000000
+      internalID: 140630018853403731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_34
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 185
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0189775715c35d4c0800000000000000
+      internalID: -4263435151675516912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_35
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 165
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0585709103d1883c0800000000000000
+      internalID: -4357200547065407408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_36
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 177
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68094d461683ef270800000000000000
+      internalID: 8286122355362926726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_37
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 181
+        width: 16
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be206122111b91a10800000000000000
+      internalID: 1880729006548321003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_38
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 177
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caed99b916c6edd90800000000000000
+      internalID: -7071095198446920020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_39
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 185
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c9a1beb14805b10800000000000000
+      internalID: 1968218292604279943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_40
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 181
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c8b30068af3c44f0800000000000000
+      internalID: -843229037827213115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_41
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 181
+        width: 15
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f821a173a2c325a90800000000000000
+      internalID: -7326727491767627121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_42
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 193
+        width: 17
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7496a6448513b7550800000000000000
+      internalID: 6159571170533992775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_43
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 189
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2884a246043985f70800000000000000
+      internalID: 9176246145535068290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_44
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 189
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de19cd2f73ff1110800000000000000
+      internalID: 1233972550477356760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_45
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 125
+        width: 14
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b521117598f16bc0800000000000000
+      internalID: -3791476090538482256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_46
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 137
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3283ff5331ce51400800000000000000
+      internalID: 294400917917087779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_47
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 129
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb72cb2244449afe0800000000000000
+      internalID: -1177334768149452865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_48
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 133
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0b97fe7c92164820800000000000000
+      internalID: 2902027473241217802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_49
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 149
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 862bf00a2e56471b0800000000000000
+      internalID: -5659786807675473304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_50
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 137
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c3da245bda0fc440800000000000000
+      internalID: 4958193651884413892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_51
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 121
+        width: 14
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b3ad543810d228a0800000000000000
+      internalID: -6331269323753151563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_52
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 121
+        width: 14
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3367df43e55daa6c0800000000000000
+      internalID: -4131255107566340557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_53
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 152
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6135410d22a75ff0800000000000000
+      internalID: -47390956885560978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_54
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 145
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aacb6905ff2a7f260800000000000000
+      internalID: 7131347752416885930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_55
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 141
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4e4547cdde729910800000000000000
+      internalID: 1842674688544034382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_56
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 141
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ad01e827dfc6f8b0800000000000000
+      internalID: -5118675403449234008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_57
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 117
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c637b8debd50c1bb0800000000000000
+      internalID: -4964086247127813268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_58
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 121
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfc330088903b9230800000000000000
+      internalID: 3646561754827406587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_59
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 105
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cca49c1af87329200800000000000000
+      internalID: 185271624709786316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_60
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 93
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbbf735983e4b2270800000000000000
+      internalID: 8226755149250952123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_61
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 93
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c239b356ab3cd8d50800000000000000
+      internalID: 6741259422573237036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_62
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 77
+        width: 18
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cc6f901fca87f610800000000000000
+      internalID: 1654944010023693504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_63
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 93
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5995bc366ff6e65d0800000000000000
+      internalID: -3067391192165820011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_64
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 77
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329b2b75a037fa920800000000000000
+      internalID: 3003745964737607971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_65
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 85
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72dda35b38abeed20800000000000000
+      internalID: 3309787851007909159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_66
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 89
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13fcef14abd9e2a60800000000000000
+      internalID: 7651226240245747505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_67
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 77
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43b69afa5140a1460800000000000000
+      internalID: 7213082244375210804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_68
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 93
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d16a88fdd5f1aad0800000000000000
+      internalID: -2692600768484449840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_69
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 81
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed80e7bed5c65f90800000000000000
+      internalID: -6965162213323534877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_70
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 37
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dafff5b5fa8e79510800000000000000
+      internalID: 1555968036129734573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_71
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 41
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 151260df8b3845c40800000000000000
+      internalID: 5500165875468476753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_72
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 37
+        width: 10
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a808dee7d34e6ce30800000000000000
+      internalID: 4523553828513874058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_73
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 37
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49bec6d0387a51250800000000000000
+      internalID: 5914817866928810900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_74
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 37
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85092537f886f07c0800000000000000
+      internalID: -4102945770186829736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_75
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 41
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80279dd44e7f05d10800000000000000
+      internalID: 2112460785167462920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_76
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 37
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18e7830ee7f411b90800000000000000
+      internalID: -7272944516880367999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_77
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 53
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82616f44771cca800800000000000000
+      internalID: 625087166299903528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_78
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 41
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6927f8821ea7eb430800000000000000
+      internalID: 3800610243013997206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_79
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 57
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c8584e424f8e0e90800000000000000
+      internalID: -7057546051099010876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_80
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 49
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0d97463f02b1da90800000000000000
+      internalID: -7290850543331205877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_81
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 23
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a87a8d9e60a6beef0800000000000000
+      internalID: -77851990623213686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_82
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 27
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b2ebc010c9e1200800000000000000
+      internalID: 152730965699865356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_83
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 16
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4f16490aa8c99de0800000000000000
+      internalID: -1325807982658314419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_84
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 9
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1396940bd696604f0800000000000000
+      internalID: -862886358764918479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_85
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 30
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10ffcbc16a5e98910800000000000000
+      internalID: 1840254424367038209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_86
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 9
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9ad1bba194c057b0800000000000000
+      internalID: -5237470236702025058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_87
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 9
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29de231722b7d8630800000000000000
+      internalID: 3930933437622578578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_88
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 9
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d667c31dae5f3fbf0800000000000000
+      internalID: -291619161967397267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_89
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 9
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a535c8e8ffa7f1b90800000000000000
+      internalID: -7268956035525880998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_90
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 9
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a7d0db4677203d20800000000000000
+      internalID: 3256145919620470689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_91
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 9
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ace6fda96134ef0800000000000000
+      internalID: -125231510206887386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_92
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 9
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96912e3a541c451e0800000000000000
+      internalID: -2209929012285662871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_93
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 9
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06be118f1e6832c70800000000000000
+      internalID: 8945141589975624544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_94
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 9
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 228610c04eb391a70800000000000000
+      internalID: 8798129197684975650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_95
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 9
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 078f42ef79d372c80800000000000000
+      internalID: -8347635661294733200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_96
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 9
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bde4d62ba68b2e70800000000000000
+      internalID: 9091508342426496441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_97
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 9
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49e2bdfb825e3e9b0800000000000000
+      internalID: -5051942393799299436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_98
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 17
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a84d643c6595c4230800000000000000
+      internalID: 3624370029304665226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_99
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 9
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fd0e8c4abef60dd0800000000000000
+      internalID: -2520046865365463568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_100
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 9
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ed274ac3a5ad8b60800000000000000
+      internalID: 7750032656666406372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussoOne-Regular_se_rep_edit_work_101
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 9
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 008fa54d40992ba60800000000000000
+      internalID: 7688375759896508416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RussoOne-Regular_se_rep_edit_work_0: -6158047881977212275
+      RussoOne-Regular_se_rep_edit_work_1: -5308382983471866326
+      RussoOne-Regular_se_rep_edit_work_10: 7152019781994808257
+      RussoOne-Regular_se_rep_edit_work_100: 7750032656666406372
+      RussoOne-Regular_se_rep_edit_work_101: 7688375759896508416
+      RussoOne-Regular_se_rep_edit_work_11: 1274192468372667830
+      RussoOne-Regular_se_rep_edit_work_12: 4152016707158152170
+      RussoOne-Regular_se_rep_edit_work_13: -5938198366506952875
+      RussoOne-Regular_se_rep_edit_work_14: -8809947965948315756
+      RussoOne-Regular_se_rep_edit_work_15: -2009033877822499320
+      RussoOne-Regular_se_rep_edit_work_16: -3291895128504711893
+      RussoOne-Regular_se_rep_edit_work_17: 5107229673018159056
+      RussoOne-Regular_se_rep_edit_work_18: -1696907415157656584
+      RussoOne-Regular_se_rep_edit_work_19: 4369504556461241944
+      RussoOne-Regular_se_rep_edit_work_2: 7934808737013342387
+      RussoOne-Regular_se_rep_edit_work_20: 2798076650305288273
+      RussoOne-Regular_se_rep_edit_work_21: 2975422440073780856
+      RussoOne-Regular_se_rep_edit_work_22: 4537034407048488156
+      RussoOne-Regular_se_rep_edit_work_23: 1368960275310098527
+      RussoOne-Regular_se_rep_edit_work_24: -6007525931458526428
+      RussoOne-Regular_se_rep_edit_work_25: -4198556845743911087
+      RussoOne-Regular_se_rep_edit_work_26: 9029977338866190872
+      RussoOne-Regular_se_rep_edit_work_27: -1806080256763683540
+      RussoOne-Regular_se_rep_edit_work_28: -4660521506343873797
+      RussoOne-Regular_se_rep_edit_work_29: -5314729947142517958
+      RussoOne-Regular_se_rep_edit_work_3: 5345789761021425096
+      RussoOne-Regular_se_rep_edit_work_30: 7990248147474787839
+      RussoOne-Regular_se_rep_edit_work_31: 5721831402013793417
+      RussoOne-Regular_se_rep_edit_work_32: 3404221778552199121
+      RussoOne-Regular_se_rep_edit_work_33: 140630018853403731
+      RussoOne-Regular_se_rep_edit_work_34: -4263435151675516912
+      RussoOne-Regular_se_rep_edit_work_35: -4357200547065407408
+      RussoOne-Regular_se_rep_edit_work_36: 8286122355362926726
+      RussoOne-Regular_se_rep_edit_work_37: 1880729006548321003
+      RussoOne-Regular_se_rep_edit_work_38: -7071095198446920020
+      RussoOne-Regular_se_rep_edit_work_39: 1968218292604279943
+      RussoOne-Regular_se_rep_edit_work_4: -5135006991035331473
+      RussoOne-Regular_se_rep_edit_work_40: -843229037827213115
+      RussoOne-Regular_se_rep_edit_work_41: -7326727491767627121
+      RussoOne-Regular_se_rep_edit_work_42: 6159571170533992775
+      RussoOne-Regular_se_rep_edit_work_43: 9176246145535068290
+      RussoOne-Regular_se_rep_edit_work_44: 1233972550477356760
+      RussoOne-Regular_se_rep_edit_work_45: -3791476090538482256
+      RussoOne-Regular_se_rep_edit_work_46: 294400917917087779
+      RussoOne-Regular_se_rep_edit_work_47: -1177334768149452865
+      RussoOne-Regular_se_rep_edit_work_48: 2902027473241217802
+      RussoOne-Regular_se_rep_edit_work_49: -5659786807675473304
+      RussoOne-Regular_se_rep_edit_work_5: -2066955237762000331
+      RussoOne-Regular_se_rep_edit_work_50: 4958193651884413892
+      RussoOne-Regular_se_rep_edit_work_51: -6331269323753151563
+      RussoOne-Regular_se_rep_edit_work_52: -4131255107566340557
+      RussoOne-Regular_se_rep_edit_work_53: -47390956885560978
+      RussoOne-Regular_se_rep_edit_work_54: 7131347752416885930
+      RussoOne-Regular_se_rep_edit_work_55: 1842674688544034382
+      RussoOne-Regular_se_rep_edit_work_56: -5118675403449234008
+      RussoOne-Regular_se_rep_edit_work_57: -4964086247127813268
+      RussoOne-Regular_se_rep_edit_work_58: 3646561754827406587
+      RussoOne-Regular_se_rep_edit_work_59: 185271624709786316
+      RussoOne-Regular_se_rep_edit_work_6: 5007341652795548764
+      RussoOne-Regular_se_rep_edit_work_60: 8226755149250952123
+      RussoOne-Regular_se_rep_edit_work_61: 6741259422573237036
+      RussoOne-Regular_se_rep_edit_work_62: 1654944010023693504
+      RussoOne-Regular_se_rep_edit_work_63: -3067391192165820011
+      RussoOne-Regular_se_rep_edit_work_64: 3003745964737607971
+      RussoOne-Regular_se_rep_edit_work_65: 3309787851007909159
+      RussoOne-Regular_se_rep_edit_work_66: 7651226240245747505
+      RussoOne-Regular_se_rep_edit_work_67: 7213082244375210804
+      RussoOne-Regular_se_rep_edit_work_68: -2692600768484449840
+      RussoOne-Regular_se_rep_edit_work_69: -6965162213323534877
+      RussoOne-Regular_se_rep_edit_work_7: 5677669112579401263
+      RussoOne-Regular_se_rep_edit_work_70: 1555968036129734573
+      RussoOne-Regular_se_rep_edit_work_71: 5500165875468476753
+      RussoOne-Regular_se_rep_edit_work_72: 4523553828513874058
+      RussoOne-Regular_se_rep_edit_work_73: 5914817866928810900
+      RussoOne-Regular_se_rep_edit_work_74: -4102945770186829736
+      RussoOne-Regular_se_rep_edit_work_75: 2112460785167462920
+      RussoOne-Regular_se_rep_edit_work_76: -7272944516880367999
+      RussoOne-Regular_se_rep_edit_work_77: 625087166299903528
+      RussoOne-Regular_se_rep_edit_work_78: 3800610243013997206
+      RussoOne-Regular_se_rep_edit_work_79: -7057546051099010876
+      RussoOne-Regular_se_rep_edit_work_8: -9067405413425438956
+      RussoOne-Regular_se_rep_edit_work_80: -7290850543331205877
+      RussoOne-Regular_se_rep_edit_work_81: -77851990623213686
+      RussoOne-Regular_se_rep_edit_work_82: 152730965699865356
+      RussoOne-Regular_se_rep_edit_work_83: -1325807982658314419
+      RussoOne-Regular_se_rep_edit_work_84: -862886358764918479
+      RussoOne-Regular_se_rep_edit_work_85: 1840254424367038209
+      RussoOne-Regular_se_rep_edit_work_86: -5237470236702025058
+      RussoOne-Regular_se_rep_edit_work_87: 3930933437622578578
+      RussoOne-Regular_se_rep_edit_work_88: -291619161967397267
+      RussoOne-Regular_se_rep_edit_work_89: -7268956035525880998
+      RussoOne-Regular_se_rep_edit_work_9: 4349622662325175043
+      RussoOne-Regular_se_rep_edit_work_90: 3256145919620470689
+      RussoOne-Regular_se_rep_edit_work_91: -125231510206887386
+      RussoOne-Regular_se_rep_edit_work_92: -2209929012285662871
+      RussoOne-Regular_se_rep_edit_work_93: 8945141589975624544
+      RussoOne-Regular_se_rep_edit_work_94: 8798129197684975650
+      RussoOne-Regular_se_rep_edit_work_95: -8347635661294733200
+      RussoOne-Regular_se_rep_edit_work_96: 9091508342426496441
+      RussoOne-Regular_se_rep_edit_work_97: -5051942393799299436
+      RussoOne-Regular_se_rep_edit_work_98: 3624370029304665226
+      RussoOne-Regular_se_rep_edit_work_99: -2520046865365463568
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 115588
+  packageName: "MK Slot Kit \u2022 Modern Neon Casino Template"
+  packageVersion: 4.0.1
+  assetPath: Assets/ModernSlots/2_ModernNeonSlot_skin#2/Fonts_ModernS2/bmp/RussoOne-Regular_0/RussoOne-Regular_0.png
+  uploadId: 772711
