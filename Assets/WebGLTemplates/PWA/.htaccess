@@ -1,0 +1,84 @@
+# Enable gzip compression for Unity WebGL builds
+<IfModule mod_mime.c>
+    # Unity WebGL compressed files
+    AddType application/wasm .wasm
+    AddType application/javascript .js
+    AddType application/octet-stream .data
+    
+    # Gzip compressed files
+    AddType application/gzip .gz
+    AddType application/x-gzip .gz
+    
+    # Serve gzip compressed files with correct encoding
+    AddEncoding gzip .gz
+    
+    # Unity specific
+    AddType application/wasm .wasm.gz
+    AddType application/javascript .js.gz
+    AddType application/octet-stream .data.gz
+    
+    # Remove encoding for .gz files to prevent double compression
+    RemoveType .gz
+    AddType application/gzip .gz
+    AddEncoding gzip .gz
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Add Content-Encoding header for .gz files
+    <FilesMatch "\.(data|wasm|js|symbols\.json)\.gz$">
+        Header set Content-Encoding "gzip"
+        Header set Vary "Accept-Encoding"
+    </FilesMatch>
+    
+    # Brotli compressed files (if using Brotli)
+    <FilesMatch "\.(data|wasm|js|symbols\.json)\.br$">
+        Header set Content-Encoding "br"
+        Header set Vary "Accept-Encoding"
+    </FilesMatch>
+    
+    # Security headers for PWA
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # Cache control for PWA assets
+    <FilesMatch "\.(html|json|js|css)$">
+        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+    </FilesMatch>
+    
+    <FilesMatch "\.(wasm|data|gz|br)$">
+        Header set Cache-Control "max-age=31536000, immutable"
+    </FilesMatch>
+    
+    <FilesMatch "service-worker\.js$">
+        Header set Cache-Control "max-age=0, no-cache"
+    </FilesMatch>
+</IfModule>
+
+# Enable CORS for WebAssembly
+<IfModule mod_headers.c>
+    <FilesMatch "\.(wasm|wasm\.gz|wasm\.br)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
+
+# Rewrite rules for compressed files
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Serve brotli compressed files if available and supported
+    RewriteCond %{HTTP:Accept-Encoding} br
+    RewriteCond %{REQUEST_FILENAME}.br -f
+    RewriteRule ^(.*)$ $1.br [L]
+    
+    # Serve gzip compressed files if available and supported
+    RewriteCond %{HTTP:Accept-Encoding} gzip
+    RewriteCond %{REQUEST_FILENAME}.gz -f
+    RewriteRule ^(.*)$ $1.gz [L]
+</IfModule>
+
+# Disable directory listing
+Options -Indexes
+
+# Default index file
+DirectoryIndex index.html

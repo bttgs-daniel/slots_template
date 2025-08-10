@@ -1,0 +1,296 @@
+/* Mobile Landscape Optimization */
+
+/* Prevent text selection and highlight on mobile */
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Ensure full viewport usage */
+html, body {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Landscape-specific styles */
+@media screen and (orientation: landscape) {
+  #unity-container {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  #unity-canvas {
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+}
+
+/* Remove portrait overlay on desktop */
+@media screen and (min-width: 1024px) {
+  body::before {
+    display: none !important;
+  }
+  
+  #orientation-warning {
+    display: none !important;
+  }
+}
+
+/* Portrait warning only on actual mobile devices */
+@media screen and (orientation: portrait) and (max-width: 1023px) {
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9998;
+  }
+}
+
+/* Hide mobile browser UI elements */
+@media screen and (max-width: 768px) {
+  /* Use CSS custom property for actual viewport height */
+  body {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    height: 100dvh; /* Dynamic viewport height for newer browsers */
+  }
+  
+  /* Container fills available space */
+  #unity-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Canvas centered and scaled to fit */
+  #unity-canvas {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+  }
+  
+  /* Landscape specific sizing */
+  @media (orientation: landscape) {
+    #unity-canvas {
+      width: auto !important;
+      height: 100% !important;
+      max-width: 177.77vh !important; /* 16:9 aspect ratio */
+    }
+  }
+  
+  /* Portrait specific (for warning) */
+  @media (orientation: portrait) {
+    #unity-canvas {
+      width: 100% !important;
+      height: auto !important;
+      max-height: 56.25vw !important; /* 16:9 aspect ratio */
+    }
+  }
+  
+  /* Hide footer on mobile */
+  #unity-footer {
+    display: none !important;
+  }
+  
+  /* Optimize touch responsiveness */
+  * {
+    touch-action: none;
+  }
+  
+  #unity-canvas {
+    touch-action: none;
+  }
+}
+
+/* iPhone X and newer - handle notch */
+@supports (padding: max(0px)) {
+  @media screen and (orientation: landscape) {
+    #unity-container {
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
+  }
+}
+
+/* Android specific fixes */
+@media screen and (max-aspect-ratio: 16/9) {
+  #unity-canvas {
+    max-width: 177.77vh;
+    margin: 0 auto;
+  }
+}
+
+/* Prevent zoom on input focus (iOS) */
+input, select, textarea {
+  font-size: 16px !important;
+}
+
+/* Smooth performance optimizations */
+#unity-canvas {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+
+/* Disable pull-to-refresh on Chrome Android */
+body {
+  overscroll-behavior-y: none;
+}
+
+/* Rotation prompt animation */
+@keyframes deviceRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+.rotate-device-icon {
+  animation: deviceRotate 2s ease-in-out infinite;
+}
+
+/* Landscape lock indicator */
+.landscape-locked {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 255, 0, 0.2);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 1000;
+  display: none;
+}
+
+@media screen and (orientation: landscape) {
+  .landscape-locked {
+    display: block;
+  }
+}
+
+/* iOS Safari Bottom Bar Fix */
+@supports (-webkit-touch-callout: none) {
+  /* iOS devices - prevent canvas from going under bottom bar */
+  #unity-container {
+    padding-bottom: env(safe-area-inset-bottom) !important;
+    padding-bottom: constant(safe-area-inset-bottom) !important; /* iOS 11.0-11.2 */
+    padding-top: 0 !important;
+  }
+  
+  #unity-canvas {
+    /* Ensure canvas doesn't overlap iOS bottom controls */
+    max-height: calc(100vh - env(safe-area-inset-bottom)) !important;
+    max-height: calc(100vh - constant(safe-area-inset-bottom)) !important;
+  }
+  
+  /* Landscape specific for iOS */
+  @media (orientation: landscape) {
+    #unity-container {
+      /* Extra padding to keep content above iOS controls */
+      padding-bottom: calc(env(safe-area-inset-bottom) + 10px) !important;
+    }
+    
+    #unity-canvas {
+      /* Scale down slightly to avoid bottom bar */
+      transform: scale(0.95) !important;
+      transform-origin: center center !important;
+    }
+  }
+  
+  /* iOS PWA Specific */
+  @media (display-mode: standalone) {
+    /* Running as PWA */
+    body {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+      top: 0 !important;
+    }
+    
+    #unity-container {
+      position: fixed;
+      top: 0 !important;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+    
+    /* Force orientation warning to cover entire viewport */
+    #ios-orientation-warning {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+    }
+  }
+}
+
+/* iOS PWA in portrait - ensure warning shows */
+@media (display-mode: standalone) and (orientation: portrait) {
+  #unity-canvas {
+    display: none !important;
+  }
+}
+
+/* iOS PWA in landscape - ensure game shows */
+@media (display-mode: standalone) and (orientation: landscape) {
+  #unity-canvas {
+    display: block !important;
+  }
+  
+  #ios-orientation-warning,
+  #orientation-warning {
+    display: none !important;
+  }
+}

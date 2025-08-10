@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <title>iOS Viewport Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            height: 100%;
+            height: -webkit-fill-available;
+        }
+        
+        body {
+            height: 100%;
+            height: -webkit-fill-available;
+            position: fixed;
+            width: 100%;
+            overflow: hidden;
+            background: #1a1a2e;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        #info {
+            padding: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .value {
+            color: #667eea;
+            font-family: monospace;
+        }
+        
+        #testCanvas {
+            background: #333;
+            border: 2px solid #667eea;
+            display: block;
+            margin: 20px auto;
+        }
+        
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        <h2>iOS Viewport Debug</h2>
+        <div>Window Width: <span class="value" id="windowWidth">-</span></div>
+        <div>Window Height: <span class="value" id="windowHeight">-</span></div>
+        <div>Inner Width: <span class="value" id="innerWidth">-</span></div>
+        <div>Inner Height: <span class="value" id="innerHeight">-</span></div>
+        <div>Screen Width: <span class="value" id="screenWidth">-</span></div>
+        <div>Screen Height: <span class="value" id="screenHeight">-</span></div>
+        <div>Visual Viewport Width: <span class="value" id="visualWidth">-</span></div>
+        <div>Visual Viewport Height: <span class="value" id="visualHeight">-</span></div>
+        <div>Orientation: <span class="value" id="orientation">-</span></div>
+        <div>Device Pixel Ratio: <span class="value" id="pixelRatio">-</span></div>
+        <div>Safe Area Top: <span class="value" id="safeTop">-</span></div>
+        <div>Safe Area Bottom: <span class="value" id="safeBottom">-</span></div>
+        <div>Safe Area Left: <span class="value" id="safeLeft">-</span></div>
+        <div>Safe Area Right: <span class="value" id="safeRight">-</span></div>
+        <div>Is Standalone: <span class="value" id="standalone">-</span></div>
+        
+        <canvas id="testCanvas"></canvas>
+        
+        <button onclick="requestFullscreen()">Request Fullscreen</button>
+        <button onclick="scrollHide()">Hide Address Bar</button>
+        <button onclick="updateInfo()">Refresh Info</button>
+    </div>
+    
+    <script>
+        function updateInfo() {
+            document.getElementById('windowWidth').textContent = window.outerWidth;
+            document.getElementById('windowHeight').textContent = window.outerHeight;
+            document.getElementById('innerWidth').textContent = window.innerWidth;
+            document.getElementById('innerHeight').textContent = window.innerHeight;
+            document.getElementById('screenWidth').textContent = screen.width;
+            document.getElementById('screenHeight').textContent = screen.height;
+            
+            if (window.visualViewport) {
+                document.getElementById('visualWidth').textContent = window.visualViewport.width;
+                document.getElementById('visualHeight').textContent = window.visualViewport.height;
+            } else {
+                document.getElementById('visualWidth').textContent = 'Not supported';
+                document.getElementById('visualHeight').textContent = 'Not supported';
+            }
+            
+            document.getElementById('orientation').textContent = 
+                window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
+            
+            document.getElementById('pixelRatio').textContent = window.devicePixelRatio;
+            
+            // Get safe area values
+            const styles = getComputedStyle(document.documentElement);
+            document.getElementById('safeTop').textContent = styles.getPropertyValue('padding-top') || '0';
+            document.getElementById('safeBottom').textContent = styles.getPropertyValue('padding-bottom') || '0';
+            document.getElementById('safeLeft').textContent = styles.getPropertyValue('padding-left') || '0';
+            document.getElementById('safeRight').textContent = styles.getPropertyValue('padding-right') || '0';
+            
+            document.getElementById('standalone').textContent = window.navigator.standalone || false;
+            
+            // Update canvas size
+            const canvas = document.getElementById('testCanvas');
+            const vh = window.innerHeight;
+            const vw = window.innerWidth;
+            
+            if (vw > vh) {
+                // Landscape
+                canvas.width = vh * 1.77; // 16:9 aspect
+                canvas.height = vh * 0.8;
+                
+                if (canvas.width > vw * 0.9) {
+                    canvas.width = vw * 0.9;
+                    canvas.height = canvas.width / 1.77;
+                }
+            } else {
+                // Portrait
+                canvas.width = vw * 0.9;
+                canvas.height = canvas.width / 1.77;
+            }
+            
+            canvas.style.width = canvas.width + 'px';
+            canvas.style.height = canvas.height + 'px';
+            
+            // Draw on canvas
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#667eea';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'white';
+            ctx.font = '20px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText(`${canvas.width} x ${canvas.height}`, canvas.width/2, canvas.height/2);
+        }
+        
+        function requestFullscreen() {
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            } else if (document.documentElement.webkitRequestFullscreen) {
+                document.documentElement.webkitRequestFullscreen();
+            }
+        }
+        
+        function scrollHide() {
+            window.scrollTo(0, 1);
+        }
+        
+        // Initial update
+        updateInfo();
+        
+        // Update on events
+        window.addEventListener('resize', updateInfo);
+        window.addEventListener('orientationchange', updateInfo);
+        
+        if (window.visualViewport) {
+            window.visualViewport.addEventListener('resize', updateInfo);
+        }
+        
+        // Prevent bounce
+        document.body.addEventListener('touchmove', function(e) {
+            e.preventDefault();
+        }, { passive: false });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+    <title>{{{ PRODUCT_NAME }}}</title>
+    <meta name="description" content="Modern-themed slot machine game with multiple variants">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="SlotTest">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="landscape">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- iOS Icon Support -->
+    <link rel="apple-touch-icon" href="icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="icons/icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="icons/icon-128x128.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="384x384" href="icons/icon-384x384.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512x512.png">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-16x16.png">
+    
+    <!-- Mobile Landscape CSS -->
+    <link rel="stylesheet" href="mobile-landscape.css">
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      html {
+        height: 100%;
+        height: -webkit-fill-available;
+        padding: 0;
+        margin: 0;
+      }
+      
+      body {
+        width: 100%;
+        height: 100%;
+        height: -webkit-fill-available;
+        height: 100vh;
+        height: 100dvh; /* Dynamic viewport height */
+        overflow: hidden;
+        background: #000000; /* Pure black for true fullscreen feel */
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        /* Hide all system UI */
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      
+      /* Remove all safe area insets globally */
+      :root {
+        --sat: 0px;
+        --sab: 0px;
+        --sal: 0px;
+        --sar: 0px;
+      }
+      
+      #unity-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      
+      #unity-canvas {
+        display: block;
+        background: #231F20;
+        cursor: default;
+        touch-action: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* Desktop - full size */
+      @media screen and (min-width: 769px) {
+        #unity-canvas {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      
+      /* Mobile landscape - fit to screen */
+      @media screen and (max-width: 768px) and (orientation: landscape) {
+        #unity-container {
+          width: 100vw;
+          height: 100vh;
+        }
+        
+        #unity-canvas {
+          width: 100%;
+          height: 100%;
+        }
+        
+        /* iOS specific */
+        @supports (-webkit-touch-callout: none) {
+          #unity-container {
+            /* Account for iOS bottom bar */
+            padding-bottom: env(safe-area-inset-bottom);
+            padding-left: env(safe-area-inset-left);
+            padding-right: env(safe-area-inset-right);
+          }
+          
+          #unity-canvas {
+            /* Ensure canvas doesn't extend into bottom bar area */
+            max-height: calc(100vh - env(safe-area-inset-bottom) - 20px);
+            margin-bottom: env(safe-area-inset-bottom);
+          }
+        }
+      }
+      
+      /* Mobile portrait - hide canvas, show message */
+      @media screen and (max-width: 768px) and (orientation: portrait) {
+        #unity-canvas {
+          display: none;
+        }
+      }
+      
+      #unity-loading-bar {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      
+      #unity-logo {
+        width: 154px;
+        height: 130px;
+        background: url('TemplateData/unity-logo-{{{ SPLASH_SCREEN_STYLE.toLowerCase() }}}.png') no-repeat center;
+        filter: drop-shadow(0 0 20px rgba(255,255,255,0.1));
+      }
+      
+      #unity-progress-bar-container {
+        width: 300px;
+        height: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+      }
+      
+      #unity-progress-bar-full {
+        height: 100%;
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        border-radius: 5px;
+        transition: width 0.3s ease;
+      }
+      
+      #unity-loading-text {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 14px;
+        margin-top: 10px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      }
+      
+      #unity-footer {
+        display: none !important; /* Always hide footer */
+      }
+      
+      #unity-fullscreen-button {
+        display: none !important;
+      }
+      
+      #install-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        padding: 15px 30px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+      
+      #install-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+      }
+      
+      #update-banner {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 15px;
+        text-align: center;
+        z-index: 1001;
+        animation: slideDown 0.3s ease;
+      }
+      
+      @keyframes slideDown {
+        from {
+          transform: translateY(-100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      
+      #update-banner button {
+        background: white;
+        color: #667eea;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 20px;
+        margin-left: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      
+      #update-banner button:hover {
+        transform: scale(1.05);
+      }
+      
+      .offline-indicator {
+        display: none;
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #ff6b6b;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 14px;
+        z-index: 1002;
+        animation: pulse 2s infinite;
+      }
+      
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        #unity-footer {
+          flex-direction: column;
+          gap: 10px;
+        }
+        
+        #install-button {
+          bottom: 10px;
+          right: 10px;
+          padding: 12px 24px;
+          font-size: 14px;
+        }
+      }
+      
+      /* Mobile-specific styles (all mobile devices) */
+      @media screen and (max-width: 768px) {
+        /* Hide footer on mobile to maximize game space */
+        #unity-footer {
+          display: none !important;
+        }
+      }
+      
+      /* iOS specific styles */
+      @supports (-webkit-touch-callout: none) {
+        /* No install button on iOS (uses Safari's Add to Home Screen) */
+        #install-button {
+          display: none !important;
+        }
+        
+        /* iOS PWA specific - full screen without any overlays */
+        @media (display-mode: standalone), (display-mode: fullscreen) {
+          html {
+            height: 100% !important;
+            padding: 0 !important;
+            margin: 0 !important;
+          }
+          
+          body {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            height: 100dvh !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            overflow: hidden !important;
+            background: #000000 !important;
+          }
+          
+          #unity-container {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            height: 100dvh !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            background: #000000 !important;
+          }
+          
+          #unity-canvas {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+          }
+          
+          #unity-footer {
+            display: none !important;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Installation Instructions Screen -->
+    <div id="install-screen" style="display: none;">
+      <div style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+        z-index: 10000;
+        overflow-y: auto;
+      ">
+        <div style="max-width: 400px; width: 100%;">
+          <h1 style="font-size: 28px; margin-bottom: 20px; color: #667eea;">
+            Install SlotTest Game
+          </h1>
+          
+          <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.9;">
+            For the best gaming experience, please add this app to your home screen
+          </p>
+          
+          <!-- iOS Instructions -->
+          <div id="ios-instructions" style="display: none;">
+            <div style="background: rgba(255,255,255,0.1); border-radius: 15px; padding: 20px; margin-bottom: 20px;">
+              <h3 style="color: #667eea; margin-bottom: 15px;">How to Install on iOS:</h3>
+              <ol style="text-align: left; font-size: 16px; line-height: 1.8;">
+                <li>Tap the <span style="color: #667eea;">Share</span> button 
+                  <svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align: middle; margin: 0 4px;">
+                    <path fill="currentColor" d="M16 5l-1.42 1.42-1.59-1.59V16h-1.98V4.83L9.42 6.42 8 5l4-4 4 4z"/>
+                    <path fill="currentColor" d="M20 10v11c0 1.1-.9 2-2 2H6c-1.11 0-2-.9-2-2V10c0-1.11.89-2 2-2h3v2H6v11h12V10h-3V8h3c1.1 0 2 .89 2 2z"/>
+                  </svg>
+                  at the bottom of Safari
+                </li>
+                <li>Scroll down and tap <span style="color: #667eea;">"Add to Home Screen"</span></li>
+                <li>Tap <span style="color: #667eea;">"Add"</span> in the top right corner</li>
+                <li>Open the app from your home screen</li>
+              </ol>
+            </div>
+          </div>
+          
+          <!-- Android Instructions -->
+          <div id="android-instructions" style="display: none;">
+            <div style="background: rgba(255,255,255,0.1); border-radius: 15px; padding: 20px; margin-bottom: 20px;">
+              <h3 style="color: #667eea; margin-bottom: 15px;">Install as App on Android:</h3>
+              
+              <!-- Install button for Android -->
+              <button id="android-install-button" style="
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                border: none;
+                padding: 15px 30px;
+                border-radius: 10px;
+                font-size: 18px;
+                font-weight: 600;
+                cursor: pointer;
+                width: 100%;
+                margin-bottom: 20px;
+                display: none;
+              ">
+                <svg width="24" height="24" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 8px;">
+                  <path fill="currentColor" d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                </svg>
+                Install App
+              </button>
+              
+              <div id="android-manual-install" style="display: block;">
+                <p style="font-size: 14px; opacity: 0.8; margin-bottom: 15px;">
+                  If the install button doesn't appear, follow these steps:
+                </p>
+                <ol style="text-align: left; font-size: 16px; line-height: 1.8;">
+                  <li>Tap the menu button 
+                    <svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align: middle; margin: 0 4px;">
+                      <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                      <circle cx="12" cy="5" r="2" fill="currentColor"/>
+                      <circle cx="12" cy="19" r="2" fill="currentColor"/>
+                    </svg>
+                    in Chrome
+                  </li>
+                  <li>Look for <span style="color: #667eea;">"Install app"</span> or <span style="color: #667eea;">"Add to Home screen"</span></li>
+                  <li>If you see "Install app", tap it for full PWA installation</li>
+                  <li>If you only see "Add to Home screen", tap it (this creates a shortcut)</li>
+                  <li>Open the app from your home screen</li>
+                </ol>
+              </div>
+              
+              <div style="margin-top: 20px; padding: 15px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+                <p style="font-size: 13px; opacity: 0.7; margin: 0;">
+                  <strong>Note:</strong> For the best experience, make sure you're using Chrome browser. 
+                  The app should show "Install app" if it's a proper PWA.
+                </p>
+              </div>
+              
+              <!-- Troubleshooting option -->
+              <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="font-size: 14px; opacity: 0.8; margin-bottom: 10px;">
+                  Having issues? The app may not detect shortcuts properly on some Android devices.
+                </p>
+                <button onclick="
+                  localStorage.setItem('android-shortcut-mode', 'true');
+                  window.location.reload();
+                " style="
+                  background: rgba(255,255,255,0.1);
+                  color: white;
+                  border: 1px solid rgba(255,255,255,0.2);
+                  padding: 10px 20px;
+                  border-radius: 6px;
+                  font-size: 14px;
+                  cursor: pointer;
+                  width: 100%;
+                ">
+                  I've added it to home screen - Continue
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Desktop Instructions -->
+          <div id="desktop-instructions" style="display: none;">
+            <div style="background: rgba(255,255,255,0.1); border-radius: 15px; padding: 20px; margin-bottom: 20px;">
+              <h3 style="color: #667eea; margin-bottom: 15px;">Install as Desktop App:</h3>
+              <ol style="text-align: left; font-size: 16px; line-height: 1.8;">
+                <li>Click the install button 
+                  <svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align: middle; margin: 0 4px;">
+                    <path fill="currentColor" d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                  </svg>
+                  in your browser's address bar
+                </li>
+                <li>Or use the browser menu and select <span style="color: #667eea;">"Install App"</span></li>
+                <li>Click <span style="color: #667eea;">"Install"</span> to confirm</li>
+              </ol>
+            </div>
+          </div>
+          
+          <div style="margin-top: 30px; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+            <p style="font-size: 14px; opacity: 0.8; margin: 0;">
+              After installation, the game will run in full screen without browser controls
+            </p>
+          </div>
+          
+          <button id="continue-anyway" style="
+            margin-top: 20px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: none;
+          " onmouseover="this.style.background='rgba(255,255,255,0.3)'" 
+             onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+            Continue in Browser (Not Recommended)
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="unity-container" style="display: none;">
+      <canvas id="unity-canvas" tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-container">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+        <div id="unity-loading-text">Loading... <span id="unity-progress-percentage">0%</span></div>
+      </div>
+      <div id="unity-footer">
+        <div id="unity-build-title">{{{ PRODUCT_NAME }}}</div>
+        <button id="unity-fullscreen-button">Fullscreen</button>
+      </div>
+    </div>
+    
+    <!-- PWA Install Button -->
+    <button id="install-button">Install Game</button>
+    
+    <!-- Update Banner -->
+    <div id="update-banner">
+      A new version is available!
+      <button id="update-button">Update Now</button>
+    </div>
+    
+    <!-- Offline Indicator -->
+    <div class="offline-indicator" id="offline-indicator">
+      Playing Offline
+    </div>
+    
+    <script>
+      // PWA Detection and Install Screen Logic
+      function isPWA() {
+        // Check if running as installed PWA
+        const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+        const isFullscreen = window.matchMedia('(display-mode: fullscreen)').matches;
+        const isMinimalUI = window.matchMedia('(display-mode: minimal-ui)').matches;
+        const isIosStandalone = window.navigator.standalone === true;
+        
+        // Check URL parameters for testing
+        const urlParams = new URLSearchParams(window.location.search);
+        const isPWAParam = urlParams.get('mode') === 'pwa';
+        
+        console.log('PWA Detection:', {
+          isStandalone,
+          isFullscreen,
+          isMinimalUI,
+          isIosStandalone,
+          isPWAParam,
+          userAgent: navigator.userAgent,
+          displayMode: window.matchMedia('(display-mode: standalone)').matches ? 'standalone' : 
+                       window.matchMedia('(display-mode: fullscreen)').matches ? 'fullscreen' :
+                       window.matchMedia('(display-mode: minimal-ui)').matches ? 'minimal-ui' : 'browser'
+        });
+        
+        return isStandalone || isFullscreen || isMinimalUI || isIosStandalone || isPWAParam;
+      }
+      
+      function detectPlatform() {
+        const userAgent = navigator.userAgent;
+        if (/iPhone|iPad|iPod/.test(userAgent)) {
+          return 'ios';
+        } else if (/Android/.test(userAgent)) {
+          return 'android';
+        } else {
+          return 'desktop';
+        }
+      }
+      
+      // Store install prompt for Android
+      let androidInstallPrompt = null;
+      
+      function showInstallScreen() {
+        const installScreen = document.getElementById('install-screen');
+        const platform = detectPlatform();
+        const continueButton = document.getElementById('continue-anyway');
+        
+        // Show appropriate instructions
+        if (platform === 'ios') {
+          document.getElementById('ios-instructions').style.display = 'block';
+          // Hide continue button on mobile
+          continueButton.style.display = 'none';
+        } else if (platform === 'android') {
+          document.getElementById('android-instructions').style.display = 'block';
+          // Hide continue button on mobile
+          continueButton.style.display = 'none';
+          
+          // Show install button if we have the prompt
+          if (androidInstallPrompt) {
+            const installBtn = document.getElementById('android-install-button');
+            const manualInstructions = document.getElementById('android-manual-install');
+            
+            installBtn.style.display = 'block';
+            manualInstructions.style.display = 'none';
+            
+            installBtn.addEventListener('click', async () => {
+              if (androidInstallPrompt) {
+                androidInstallPrompt.prompt();
+                const { outcome } = await androidInstallPrompt.userChoice;
+                
+                if (outcome === 'accepted') {
+                  console.log('User accepted the install prompt');
+                  // The page will reload when app is installed
+                } else {
+                  console.log('User dismissed the install prompt');
+                  // Show manual instructions
+                  installBtn.style.display = 'none';
+                  manualInstructions.style.display = 'block';
+                }
+                androidInstallPrompt = null;
+              }
+            });
+          }
+        } else {
+          document.getElementById('desktop-instructions').style.display = 'block';
+          // Show continue button only on desktop
+          continueButton.style.display = 'inline-block';
+        }
+        
+        installScreen.style.display = 'block';
+        
+        // Continue anyway button (only for desktop)
+        if (platform === 'desktop') {
+          document.getElementById('continue-anyway').addEventListener('click', function() {
+            installScreen.style.display = 'none';
+            document.getElementById('unity-container').style.display = 'block';
+            startGame();
+          });
+        }
+      }
+      
+      function startGame() {
+        // Initialize Unity game
+        loadUnityGame();
+      }
+      
+      // Check if app is installed as PWA
+      window.addEventListener('load', function() {
+        // Check for debug mode
+        const urlParams = new URLSearchParams(window.location.search);
+        const debugMode = urlParams.get('debug') === 'true';
+        const skipInstall = urlParams.get('skip') === 'true';
+        const forceInstall = urlParams.get('install') === 'true';
+        
+        // Platform detection
+        const isAndroid = /Android/.test(navigator.userAgent);
+        const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
+        const androidShortcutMode = localStorage.getItem('android-shortcut-mode') === 'true';
+        
+        if (debugMode) {
+          console.log('Debug mode enabled - PWA detection status:', isPWA());
+          console.log('Android device:', isAndroid);
+          console.log('iOS device:', isIOS);
+          console.log('Android shortcut mode:', androidShortcutMode);
+        }
+        
+        // Logic:
+        // - iOS: Show install screen only if not in standalone mode
+        // - Android: Show install screen only if not in standalone mode (with shortcut fallback)
+        // - Desktop: Show install screen with continue option
+        
+        const shouldShowGame = isPWA() || skipInstall || (isAndroid && androidShortcutMode);
+        
+        if (shouldShowGame && !forceInstall) {
+          // Running as PWA - show game directly
+          console.log('Running as PWA or skip mode - starting game');
+          
+          // IMPORTANT: Hide install screen first
+          document.getElementById('install-screen').style.display = 'none';
+          document.getElementById('unity-container').style.display = 'block';
+          
+          // Remove all padding/margins for full screen in PWA
+          document.body.style.padding = '0';
+          document.body.style.margin = '0';
+          document.getElementById('unity-container').style.padding = '0';
+          
+          // For Android, ensure full screen usage
+          if (isAndroid) {
+            console.log('Android detected - applying full screen styles');
+            const container = document.getElementById('unity-container');
+            const canvas = document.getElementById('unity-canvas');
+            
+            // Use the entire viewport without overflow
+            container.style.cssText = 'position:fixed!important;top:0!important;left:0!important;width:100vw!important;height:100vh!important;padding:0!important;margin:0!important;overflow:hidden!important';
+            
+            // Fit canvas to container
+            canvas.style.cssText = 'position:absolute!important;top:0!important;left:0!important;width:100%!important;height:100%!important;object-fit:contain!important';
+            
+            // Hide footer
+            const footer = document.getElementById('unity-footer');
+            if (footer) footer.style.display = 'none';
+            
+            // Force body to be fixed
+            document.body.style.position = 'fixed';
+            document.body.style.width = '100%';
+            document.body.style.height = '100%';
+            document.body.style.overflow = 'hidden';
+          }
+          
+          // For iOS PWA, ensure full screen usage
+          if (window.navigator.standalone === true) {
+            console.log('iOS PWA detected - applying full screen styles');
+            // Apply full screen styles
+            document.documentElement.style.height = '100%';
+            document.body.style.height = '100%';
+            
+            const container = document.getElementById('unity-container');
+            const canvas = document.getElementById('unity-canvas');
+            
+            // Use the entire viewport
+            container.style.cssText = 'position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;width:100%!important;height:100%!important;padding:0!important;margin:0!important';
+            canvas.style.cssText = 'position:absolute!important;top:0!important;left:0!important;width:100%!important;height:100%!important';
+            
+            // Hide footer
+            const footer = document.getElementById('unity-footer');
+            if (footer) footer.style.display = 'none';
+          }
+          
+          startGame();
+        } else {
+          // Not running as PWA - show install instructions
+          console.log('Not running as PWA - showing install screen');
+          console.log('To skip install screen, add ?skip=true to the URL');
+          showInstallScreen();
+        }
+      });
+      
+      // Unity Game Loader (wrapped in function)
+      function loadUnityGame() {
+        const buildUrl = "Build";
+        const loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
+        const config = {
+        dataUrl: buildUrl + "/{{{ DATA_FILENAME }}}",
+        frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",
+        codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",
+#if MEMORY_FILENAME
+        memoryUrl: buildUrl + "/{{{ MEMORY_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+        symbolsUrl: buildUrl + "/{{{ SYMBOLS_FILENAME }}}",
+#endif
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "{{{ COMPANY_NAME }}}",
+        productName: "{{{ PRODUCT_NAME }}}",
+        productVersion: "{{{ PRODUCT_VERSION }}}",
+        matchWebGLToCanvasSize: true, // Enable automatic canvas sizing
+      };
+
+      const container = document.querySelector("#unity-container");
+      const canvas = document.querySelector("#unity-canvas");
+      const loadingBar = document.querySelector("#unity-loading-bar");
+      const progressBarFull = document.querySelector("#unity-progress-bar-full");
+      const progressPercentage = document.querySelector("#unity-progress-percentage");
+      const fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      const footer = document.querySelector("#unity-footer");
+      
+      // Viewport handling will be done after Unity loads
+
+      loadingBar.style.display = "flex";
+
+      const script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          const percentage = Math.round(100 * progress);
+          progressBarFull.style.width = percentage + "%";
+          progressPercentage.textContent = percentage + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+          // Never show footer
+          if (footer) {
+            footer.style.display = "none";
+          }
+          
+          // Hide fullscreen button on all platforms
+          if (fullscreenButton) {
+            fullscreenButton.style.display = "none";
+          }
+          
+          // Store Unity instance globally for PWA features
+          window.unityInstance = unityInstance;
+          
+          // Fix canvas sizing after Unity loads
+          setTimeout(() => {
+            const canvas = document.getElementById('unity-canvas');
+            const container = document.getElementById('unity-container');
+            
+            if (canvas && container) {
+              // For mobile, fill the entire screen
+              const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+              
+              if (isMobile) {
+                canvas.style.width = '100%';
+                canvas.style.height = '100%';
+                canvas.style.position = 'absolute';
+                canvas.style.top = '0';
+                canvas.style.left = '0';
+                container.style.width = '100vw';
+                container.style.height = '100vh';
+                container.style.position = 'fixed';
+                container.style.top = '0';
+                container.style.left = '0';
+              }
+            }
+          }, 100);
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+      } // End of loadUnityGame function
+
+      // PWA Installation
+      let deferredPrompt;
+      const installButton = document.getElementById('install-button');
+      
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        
+        // Store for Android install screen
+        androidInstallPrompt = e;
+        
+        // Only show floating install button on desktop
+        const isDesktop = !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        if (isDesktop) {
+          installButton.style.display = 'block';
+          
+          installButton.addEventListener('click', async () => {
+            if (deferredPrompt) {
+              deferredPrompt.prompt();
+              const { outcome } = await deferredPrompt.userChoice;
+              
+              if (outcome === 'accepted') {
+                console.log('User accepted the install prompt');
+                installButton.style.display = 'none';
+              }
+              deferredPrompt = null;
+            }
+          });
+        }
+      });
+      
+      window.addEventListener('appinstalled', () => {
+        console.log('PWA was installed');
+        installButton.style.display = 'none';
+      });
+
+      // Service Worker Registration - Register early for PWA detection
+      if ('serviceWorker' in navigator) {
+        // Register immediately, not waiting for load
+        navigator.serviceWorker.register('./service-worker.js')
+          .then(registration => {
+            console.log('ServiceWorker registration successful:', registration);
+              
+              // Check for updates
+              registration.addEventListener('updatefound', () => {
+                const newWorker = registration.installing;
+                newWorker.addEventListener('statechange', () => {
+                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    // New version available
+                    const updateBanner = document.getElementById('update-banner');
+                    const updateButton = document.getElementById('update-button');
+                    
+                    updateBanner.style.display = 'block';
+                    
+                    updateButton.addEventListener('click', () => {
+                      newWorker.postMessage({ type: 'SKIP_WAITING' });
+                      window.location.reload();
+                    });
+                  }
+                });
+              });
+            })
+            .catch(err => {
+              console.log('ServiceWorker registration failed:', err);
+            });
+      }
+
+      // Online/Offline Detection
+      const offlineIndicator = document.getElementById('offline-indicator');
+      
+      function updateOnlineStatus() {
+        if (navigator.onLine) {
+          offlineIndicator.style.display = 'none';
+          document.body.classList.remove('offline');
+        } else {
+          offlineIndicator.style.display = 'block';
+          document.body.classList.add('offline');
+        }
+      }
+      
+      window.addEventListener('online', updateOnlineStatus);
+      window.addEventListener('offline', updateOnlineStatus);
+      updateOnlineStatus();
+
+      // Prevent scrolling on mobile
+      document.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+      }, { passive: false });
+      
+      // Try to hide mobile browser UI by scrolling (no fullscreen)
+      function hideMobileBrowserUI() {
+        // Just scroll to hide address bar, no fullscreen on any device
+        window.scrollTo(0, 1);
+      }
+      
+      // Hide browser UI after page loads
+      window.addEventListener('load', () => {
+        setTimeout(hideMobileBrowserUI, 100);
+      });
+      
+      // Re-hide on orientation change
+      window.addEventListener('orientationchange', () => {
+        setTimeout(hideMobileBrowserUI, 500);
+      });
+
+      // Force Landscape Orientation (Mobile Only)
+      function initOrientationHandling() {
+        // Don't show orientation warnings if install screen is visible
+        if (document.getElementById('install-screen').style.display !== 'none') {
+          console.log('Install screen visible - skipping orientation checks');
+          return;
+        }
+        
+        // Check if running as iOS PWA
+        function isIOSPWA() {
+          return (window.navigator.standalone === true) || 
+                 (window.matchMedia('(display-mode: standalone)').matches && /iPhone|iPad|iPod/.test(navigator.userAgent));
+        }
+        
+        // Check if device is mobile
+        function isMobileDevice() {
+          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+                 (navigator.maxTouchPoints && navigator.maxTouchPoints > 2);
+        }
+        
+        // Skip orientation checks on desktop
+        if (!isMobileDevice()) {
+          console.log('Desktop detected - skipping orientation checks');
+          return;
+        }
+        
+        // Special handling for iOS PWA
+        if (isIOSPWA()) {
+          console.log('iOS PWA detected - using optimized orientation handling');
+          // For iOS PWA, use CSS-based detection with faster response
+          handleIOSPWAOrientation();
+          return;
+        }
+        
+        console.log('Mobile device detected - enabling orientation handling');
+        
+        // Try to lock orientation using Screen Orientation API
+        if (screen.orientation && screen.orientation.lock) {
+          screen.orientation.lock('landscape').catch((err) => {
+            console.log('Orientation lock not supported:', err);
+          });
+        }
+        
+        let orientationWarning = null;
+        let lastOrientation = null;
+        
+        function checkOrientation() {
+          // Multiple ways to detect orientation for better compatibility
+          const isPortrait = 
+            window.innerHeight > window.innerWidth ||
+            (screen.orientation && screen.orientation.type && screen.orientation.type.includes('portrait')) ||
+            (window.orientation !== undefined && (window.orientation === 0 || window.orientation === 180));
+          
+          // Only act if orientation actually changed
+          if (isPortrait === lastOrientation) {
+            return;
+          }
+          lastOrientation = isPortrait;
+          
+          console.log('Orientation changed - Portrait:', isPortrait);
+          
+          if (isPortrait) {
+            // Show rotation prompt
+            if (!orientationWarning) {
+              orientationWarning = document.createElement('div');
+              orientationWarning.id = 'orientation-warning';
+              orientationWarning.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(26, 26, 46, 0.98);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 99999;
+                color: white;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+                text-align: center;
+                padding: 20px;
+                box-sizing: border-box;
+              `;
+              orientationWarning.innerHTML = `
+                <svg width="100" height="100" viewBox="0 0 100 100" style="animation: rotateDevice 2s infinite ease-in-out;">
+                  <style>
+                    @keyframes rotateDevice {
+                      0%, 100% { transform: rotate(0deg); }
+                      50% { transform: rotate(90deg); }
+                    }
+                  </style>
+                  <rect x="35" y="20" width="30" height="60" rx="5" fill="none" stroke="white" stroke-width="3"/>
+                  <circle cx="50" cy="70" r="3" fill="white"/>
+                  <path d="M 70 50 L 80 40 L 80 60 Z" fill="white"/>
+                </svg>
+                <h2 style="margin: 30px 0 10px 0; font-size: 24px; font-weight: 600;">Please Rotate Your Device</h2>
+                <p style="margin: 0; font-size: 16px; opacity: 0.8; max-width: 300px;">
+                  This game is best played in landscape mode. Please rotate your device to continue.
+                </p>
+              `;
+              document.body.appendChild(orientationWarning);
+            } else {
+              orientationWarning.style.display = 'flex';
+            }
+            
+            // Pause Unity if running
+            if (window.unityInstance) {
+              window.unityInstance.SendMessage('SlotController', 'OnApplicationPause', 'true');
+            }
+          } else {
+            // Hide rotation prompt
+            if (orientationWarning) {
+              orientationWarning.style.display = 'none';
+            }
+            
+            // Resume Unity if it was paused
+            if (window.unityInstance) {
+              window.unityInstance.SendMessage('SlotController', 'OnApplicationPause', 'false');
+            }
+          }
+        }
+        
+        // Initial check with small delay to ensure proper dimensions
+        setTimeout(checkOrientation, 100);
+        
+        // Listen to all possible orientation change events
+        window.addEventListener('resize', () => {
+          setTimeout(checkOrientation, 100); // Small delay for dimension update
+        });
+        
+        window.addEventListener('orientationchange', () => {
+          setTimeout(checkOrientation, 100); // Small delay for dimension update
+        });
+        
+        // Modern orientation API
+        if (screen.orientation) {
+          screen.orientation.addEventListener('change', () => {
+            setTimeout(checkOrientation, 100);
+          });
+        }
+        
+        // Periodically check orientation (fallback for problematic devices)
+        setInterval(checkOrientation, 1000);
+        
+        // No fullscreen requests on any device
+        // Users can use browser's own fullscreen if they want
+      }
+      
+      // iOS PWA specific orientation handler
+      function handleIOSPWAOrientation() {
+        let orientationWarning = null;
+        let checkTimer = null;
+        
+        function checkIOSOrientation() {
+          // Use viewport dimensions for iOS PWA
+          const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+          const viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+          const isPortrait = viewportHeight > viewportWidth;
+          
+          console.log(`iOS PWA orientation check - W: ${viewportWidth}, H: ${viewportHeight}, Portrait: ${isPortrait}`);
+          
+          if (isPortrait) {
+            if (!orientationWarning) {
+              orientationWarning = document.createElement('div');
+              orientationWarning.id = 'ios-orientation-warning';
+              orientationWarning.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(26, 26, 46, 0.98);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 999999;
+                color: white;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+                text-align: center;
+                padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+                box-sizing: border-box;
+                pointer-events: all;
+                touch-action: none;
+              `;
+              orientationWarning.innerHTML = `
+                <svg width="100" height="100" viewBox="0 0 100 100" style="animation: rotateDevice 2s infinite ease-in-out;">
+                  <style>
+                    @keyframes rotateDevice {
+                      0%, 100% { transform: rotate(0deg); }
+                      50% { transform: rotate(90deg); }
+                    }
+                  </style>
+                  <rect x="35" y="20" width="30" height="60" rx="5" fill="none" stroke="white" stroke-width="3"/>
+                  <circle cx="50" cy="70" r="3" fill="white"/>
+                  <path d="M 70 50 L 80 40 L 80 60 Z" fill="white"/>
+                </svg>
+                <h2 style="margin: 30px 0 10px 0; font-size: 24px; font-weight: 600;">Please Rotate Your Device</h2>
+                <p style="margin: 0; font-size: 16px; opacity: 0.8; max-width: 300px;">
+                  This game requires landscape mode. Please rotate your device horizontally.
+                </p>
+              `;
+              document.body.appendChild(orientationWarning);
+            }
+            orientationWarning.style.display = 'flex';
+            
+            // Pause Unity
+            if (window.unityInstance) {
+              window.unityInstance.SendMessage('SlotController', 'OnApplicationPause', 'true');
+            }
+          } else {
+            if (orientationWarning) {
+              orientationWarning.style.display = 'none';
+            }
+            
+            // Resume Unity
+            if (window.unityInstance) {
+              window.unityInstance.SendMessage('SlotController', 'OnApplicationPause', 'false');
+            }
+          }
+        }
+        
+        // Initial check
+        setTimeout(checkIOSOrientation, 100);
+        
+        // Use ResizeObserver for better iOS PWA detection
+        if (window.ResizeObserver) {
+          const resizeObserver = new ResizeObserver(() => {
+            clearTimeout(checkTimer);
+            checkTimer = setTimeout(checkIOSOrientation, 50);
+          });
+          resizeObserver.observe(document.documentElement);
+        }
+        
+        // Fallback to standard events
+        window.addEventListener('resize', () => {
+          clearTimeout(checkTimer);
+          checkTimer = setTimeout(checkIOSOrientation, 100);
+        });
+        
+        window.addEventListener('orientationchange', () => {
+          clearTimeout(checkTimer);
+          checkTimer = setTimeout(checkIOSOrientation, 200);
+        });
+        
+        // Check periodically as backup
+        setInterval(checkIOSOrientation, 2000);
+      }
+      
+      // Initialize orientation handling when page loads (only for PWA mode)
+      window.addEventListener('load', function() {
+        // Only initialize if we're in PWA mode or user continues in browser
+        if (isPWA()) {
+          initOrientationHandling();
+        }
+      });
+      
+      // Re-check when app becomes visible
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden && window.checkOrientation) {
+          window.checkOrientation();
+        }
+      });
+
+      // iOS specific: prevent bounce scroll
+      document.body.addEventListener('touchmove', (e) => {
+        if (e.target === document.body) {
+          e.preventDefault();
+        }
+      }, { passive: false });
+
+      // Visibility API to pause/resume game
+      document.addEventListener('visibilitychange', () => {
+        if (window.unityInstance) {
+          if (document.hidden) {
+            // Pause the game
+            window.unityInstance.SendMessage('SlotController', 'OnApplicationPause', 'true');
+          } else {
+            // Resume the game
+            window.unityInstance.SendMessage('SlotController', 'OnApplicationPause', 'false');
+          }
+        }
+      });
+
+      // Save game state periodically
+      if ('serviceWorker' in navigator && 'sync' in self.registration) {
+        setInterval(() => {
+          navigator.serviceWorker.ready.then(registration => {
+            registration.sync.register('sync-game-progress');
+          });
+        }, 60000); // Every minute
+      }
+    </script>
+  </body>
+</html>

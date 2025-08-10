@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>PWA Installation Check</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .check-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .check-item.success {
+            border-left: 4px solid #4caf50;
+        }
+        .check-item.error {
+            border-left: 4px solid #f44336;
+        }
+        .check-item.warning {
+            border-left: 4px solid #ff9800;
+        }
+        .status {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .success .status { color: #4caf50; }
+        .error .status { color: #f44336; }
+        .warning .status { color: #ff9800; }
+        code {
+            background: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        h1 {
+            color: #333;
+        }
+        .install-button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px 0;
+            display: none;
+        }
+        .install-button:hover {
+            background: #5a67d8;
+        }
+    </style>
+</head>
+<body>
+    <h1>PWA Installation Checker</h1>
+    <div id="checks"></div>
+    <button id="installBtn" class="install-button">Test Install Prompt</button>
+    
+    <script>
+        const checks = document.getElementById('checks');
+        let installPrompt = null;
+        
+        function addCheck(status, message, details = '') {
+            const div = document.createElement('div');
+            div.className = `check-item ${status}`;
+            div.innerHTML = `
+                <span class="status">
+                    ${status === 'success' ? '✓' : status === 'error' ? '✗' : '⚠'}
+                </span>
+                ${message}
+                ${details ? `<br><small style="color: #666; margin-left: 30px;">${details}</small>` : ''}
+            `;
+            checks.appendChild(div);
+        }
+        
+        // Check HTTPS
+        if (location.protocol === 'https:' || location.hostname === 'localhost') {
+            addCheck('success', 'HTTPS or localhost detected');
+        } else {
+            addCheck('error', 'Not served over HTTPS', 'PWA requires HTTPS (or localhost for testing)');
+        }
+        
+        // Check manifest
+        fetch('./manifest.json')
+            .then(r => r.json())
+            .then(manifest => {
+                addCheck('success', 'Manifest found and valid JSON');
+                
+                // Check required fields
+                if (manifest.name) {
+                    addCheck('success', `Name: "${manifest.name}"`);
+                } else {
+                    addCheck('error', 'Missing "name" field in manifest');
+                }
+                
+                if (manifest.short_name) {
+                    addCheck('success', `Short name: "${manifest.short_name}"`);
+                } else {
+                    addCheck('warning', 'Missing "short_name" field in manifest');
+                }
+                
+                if (manifest.start_url) {
+                    addCheck('success', `Start URL: "${manifest.start_url}"`);
+                } else {
+                    addCheck('error', 'Missing "start_url" field in manifest');
+                }
+                
+                if (manifest.display) {
+                    addCheck('success', `Display mode: "${manifest.display}"`);
+                } else {
+                    addCheck('error', 'Missing "display" field in manifest');
+                }
+                
+                if (manifest.icons && manifest.icons.length > 0) {
+                    const sizes = manifest.icons.map(i => i.sizes).join(', ');
+                    addCheck('success', `Icons found: ${manifest.icons.length} icons`, `Sizes: ${sizes}`);
+                    
+                    // Check for required sizes
+                    const has192 = manifest.icons.some(i => i.sizes.includes('192'));
+                    const has512 = manifest.icons.some(i => i.sizes.includes('512'));
+                    
+                    if (!has192) {
+                        addCheck('warning', 'Missing 192x192 icon', 'Required for PWA installation');
+                    }
+                    if (!has512) {
+                        addCheck('warning', 'Missing 512x512 icon', 'Recommended for splash screen');
+                    }
+                } else {
+                    addCheck('error', 'No icons found in manifest');
+                }
+            })
+            .catch(err => {
+                addCheck('error', 'Failed to load manifest.json', err.message);
+            });
+        
+        // Check service worker
+        if ('serviceWorker' in navigator) {
+            addCheck('success', 'Service Worker API supported');
+            
+            navigator.serviceWorker.getRegistration()
+                .then(reg => {
+                    if (reg) {
+                        addCheck('success', 'Service Worker registered', `Scope: ${reg.scope}`);
+                        if (reg.active) {
+                            addCheck('success', 'Service Worker is active');
+                        } else if (reg.installing) {
+                            addCheck('warning', 'Service Worker is installing');
+                        } else if (reg.waiting) {
+                            addCheck('warning', 'Service Worker is waiting');
+                        }
+                    } else {
+                        addCheck('warning', 'No Service Worker registered', 'Trying to register...');
+                        
+                        navigator.serviceWorker.register('./service-worker.js')
+                            .then(reg => {
+                                addCheck('success', 'Service Worker registered successfully');
+                            })
+                            .catch(err => {
+                                addCheck('error', 'Failed to register Service Worker', err.message);
+                            });
+                    }
+                })
+                .catch(err => {
+                    addCheck('error', 'Error checking Service Worker', err.message);
+                });
+        } else {
+            addCheck('error', 'Service Worker not supported in this browser');
+        }
+        
+        // Check install prompt
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            installPrompt = e;
+            addCheck('success', 'Install prompt available', 'App is installable as PWA');
+            
+            const btn = document.getElementById('installBtn');
+            btn.style.display = 'block';
+            btn.onclick = async () => {
+                installPrompt.prompt();
+                const { outcome } = await installPrompt.userChoice;
+                addCheck('success', `Install prompt result: ${outcome}`);
+                installPrompt = null;
+                btn.style.display = 'none';
+            };
+        });
+        
+        // Check if already installed
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+            addCheck('success', 'App is running in standalone mode (already installed)');
+        } else {
+            addCheck('warning', 'App is running in browser mode (not installed)');
+        }
+        
+        // After 3 seconds, check if install prompt fired
+        setTimeout(() => {
+            if (!installPrompt && !window.matchMedia('(display-mode: standalone)').matches) {
+                addCheck('warning', 'Install prompt not triggered', 
+                    'This could mean: 1) App doesn\'t meet PWA criteria, 2) Already installed, or 3) User dismissed it recently');
+                
+                // Additional debugging
+                addCheck('warning', 'Debugging info:', 
+                    `Protocol: ${location.protocol}, Host: ${location.hostname}, UA: ${navigator.userAgent.includes('Chrome') ? 'Chrome' : 'Other'}`);
+            }
+        }, 3000);
+    </script>
+</body>
+</html>

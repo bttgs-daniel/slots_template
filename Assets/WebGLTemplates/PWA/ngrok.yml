@@ -1,0 +1,24 @@
+# Ngrok configuration for Unity WebGL PWA
+# Usage: ngrok http 8000 --config=ngrok.yml
+
+version: 2
+
+tunnels:
+  unity-webgl:
+    proto: http
+    addr: 8000
+    inspect: true
+    
+    # Add response headers for gzipped files
+    host_header: rewrite
+    
+    # Custom headers (requires ngrok paid plan)
+    # headers:
+    #   Content-Encoding: gzip
+    
+# For proper gzip handling with ngrok, you need to:
+# 1. Use the local unity-server.py instead of python's SimpleHTTPServer
+# 2. Run: python unity-server.py 8000
+# 3. Then: ngrok http 8000
+#
+# The unity-server.py will handle proper headers before ngrok tunnels them
